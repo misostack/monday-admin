@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/monday-admin",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,7 +61,41 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": false
+            }                       
           }
         },
         "serve": {
@@ -72,7 +106,13 @@
           "configurations": {
             "production": {
               "browserTarget": "monday-admin:build:production"
-            }
+            },
+            "dev": {
+              "browserTarget": "monday-admin:build:dev"
+            },
+            "local": {
+              "browserTarget": "monday-admin:build:local"
+            }                        
           }
         },
         "extract-i18n": {
@@ -118,9 +158,9 @@
             "devServerTarget": "monday-admin:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "monday-admin:serve:production"
-            }
+            "local": {
+              "devServerTarget": "monday-admin:serve:local"
+            }        
           }
         }
       }

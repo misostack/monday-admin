@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { environment } from '../environments/environment';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -19,13 +20,13 @@ describe('AppComponent', () => {
   it(`should have as title 'monday-admin'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('monday-admin');
+    expect(app.title).toEqual(`${environment.name}`);
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('monday-admin app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain(`${environment.name} app is running!`);
   });
 });

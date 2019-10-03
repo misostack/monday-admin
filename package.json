@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "ng serve --ssl false --host 0.0.0.0 --open --configuration=local",
+    "reload": "ng serve --ssl false --host 0.0.0.0 --configuration=local",
+    "remote": "ng serve --ssl false --host 0.0.0.0 --configuration=local --disable-host-check",
+    "buildDev": "ng build --configuration=dev",
+    "buildProd": "ng build --configuration=production --aot true --output-hashing all"
   },
   "private": true,
   "dependencies": {
