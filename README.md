@@ -37,7 +37,22 @@ cp src/environments/environment.prod.dest.ts src/environments/environment.prod.t
 yarn buildProd
 ```
 
-## II.Architecture
+## II. Dev Tool
+
+### VSCode
+
+```bash
+ext install Angular.ng-template
+# or
+yarn add @angular/language-service -D
+# and update tsconfig.json
+compilerOptions->
+"plugins": [
+  {"name": "@angular/language-service"}
+]
+```
+
+## III.Architecture
 
 ### 1.Folder Structure
 
