@@ -61,6 +61,14 @@ compilerOptions->
 - [Global styles](https://github.com/angular/angular-cli/wiki/stories-global-styles)
 - [Bulma CSS Framework](https://bulma.io/documentation/customize/with-node-sass/)
 - [HMR(Hot module Replacement)](https://github.com/angular/angular-cli/wiki/stories-configure-hmr)
+- [CSS Preprocessor](https://github.com/angular/angular-cli/wiki/stories-css-preprocessors)
+- [Using library](https://angular.io/guide/using-libraries) : Consider
+- [Global scripts](https://github.com/angular/angular-cli/wiki/stories-global-scripts)
+
+```bash
+ng config schematics.@schematics/angular:component.styleext scss
+# note: @schematics/angular is the default schematic for the Angular CLI
+```
 
 ### 1.Folder Structure
 

@@ -28,9 +28,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/vendor/prism.css"
             ],
-            "scripts": [],
+            "scripts": [
+              {
+                "input": "src/vendor/prism.js"
+              },
+              {
+                "input": "src/js/global.js"
+              }
+            ],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/styles"

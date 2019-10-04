@@ -9,4 +9,13 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
   title = environment.name;
+
+  ruby_code = `
+  #!/usr/bin/env ruby
+
+  def welcome
+    # $program_name is global variable
+    puts "#{$program_name} - Learn Enough Ruby To Be Dangerous!"
+  end  
+  `
 }
