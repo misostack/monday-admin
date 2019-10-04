@@ -54,11 +54,15 @@ compilerOptions->
 
 ## III.Architecture
 
-### 1.Folder Structure
+### 0.Pieces
 
+- [Angular CLI Stories](https://github.com/angular/angular-cli/wiki/stories)
 - [Asset Config](https://angular.io/guide/workspace-config#asset-config)
 - [Global styles](https://github.com/angular/angular-cli/wiki/stories-global-styles)
 - [Bulma CSS Framework](https://bulma.io/documentation/customize/with-node-sass/)
+- [HMR(Hot module Replacement)](https://github.com/angular/angular-cli/wiki/stories-configure-hmr)
+
+### 1.Folder Structure
 
 ### 2.Component Architecture
 

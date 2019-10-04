@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  name: 'monday-admin-dev'
+  name: 'monday-admin-dev',
+  hmr: false
 };

@@ -92,7 +92,7 @@
                 }
               ],
               "optimization": false,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": true,
               "extractCss": true,
               "namedChunks": false,
@@ -116,7 +116,8 @@
               "browserTarget": "monday-admin:build:dev"
             },
             "local": {
-              "browserTarget": "monday-admin:build:local"
+              "browserTarget": "monday-admin:build:local",
+              "hmr": true
             }                        
           }
         },
