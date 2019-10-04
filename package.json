@@ -4,11 +4,14 @@
   "scripts": {
     "ng": "ng",
     "test": "ng test",
+    "test-headless": "ng test --watch=false --no-progress --browsers=ChromeHeadless",
+    "test-headless-ci": "ng test --watch=false --no-progress --browsers=ChromeHeadlessCI",
     "start": "ng serve --ssl false --host 0.0.0.0 --open --configuration=local",
     "reload": "ng serve --ssl false --host 0.0.0.0 --configuration=local",
     "remote": "ng serve --ssl false --host 0.0.0.0 --configuration=local --disable-host-check",
     "buildDev": "ng build --configuration=dev",
-    "buildProd": "ng build --configuration=production --aot true --output-hashing all"
+    "buildProd": "ng build --configuration=production --aot true --output-hashing all",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

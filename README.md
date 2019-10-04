@@ -11,6 +11,14 @@ cp src/environments/environment.local.dest.ts src/environments/environment.local
 yarn start
 ```
 
+#### Run Test
+```bash
+# default mode
+yarn test --configuration=local
+# headless mode
+yarn test-headless --configuration=local
+```
+
 ### 2.Development
 
 ```bash

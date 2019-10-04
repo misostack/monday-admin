@@ -1,5 +1,6 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+import { environment } from '../../src/environments/environment';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -8,9 +9,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it(`should display welcome message : ${environment.name}`, () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('monday-admin app is running!');
+    expect(page.getTitleText()).toEqual(`${environment.name} app is running!`);
   });
 
   afterEach(async () => {
