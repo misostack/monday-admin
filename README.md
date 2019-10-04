@@ -56,6 +56,10 @@ compilerOptions->
 
 ### 1.Folder Structure
 
+- [Asset Config](https://angular.io/guide/workspace-config#asset-config)
+- [Global styles](https://github.com/angular/angular-cli/wiki/stories-global-styles)
+- [Bulma CSS Framework](https://bulma.io/documentation/customize/with-node-sass/)
+
 ### 2.Component Architecture
 
 ### 3.Application State Management
