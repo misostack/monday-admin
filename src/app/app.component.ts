@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { environment } from '../environments/environment';
+import { marker as _TRANSLATE } from '@biesbjerg/ngx-translate-extract-marker';
 
 @Component({
   selector: 'monday-root',
@@ -8,6 +9,7 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   title = environment.name;
 
   ruby_code = `

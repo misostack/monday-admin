@@ -11,7 +11,8 @@
     "remote": "ng serve --ssl false --host 0.0.0.0 --configuration=local --disable-host-check",
     "buildDev": "ng build --configuration=dev",
     "buildProd": "ng build --configuration=production --aot true --output-hashing all",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "extract-translations": "ngx-translate-extract --input ./src --output ./src/assets/i18n/en.json -m _TRANSLATE"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +24,8 @@
     "@angular/platform-browser": "~8.2.9",
     "@angular/platform-browser-dynamic": "~8.2.9",
     "@angular/router": "~8.2.9",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -33,6 +36,8 @@
     "@angular/compiler-cli": "~8.2.9",
     "@angular/language-service": "^8.2.9",
     "@angularclass/hmr": "^2.1.3",
+    "@biesbjerg/ngx-translate-extract": "^4.2.0",
+    "@biesbjerg/ngx-translate-extract-marker": "^1.0.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
