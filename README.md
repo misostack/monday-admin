@@ -30,6 +30,9 @@ yarn buildDev
 https://misostack.github.io/monday-admin
 ```
 
+- [URL](https://misostack.github.io/monday-admin)
+- [Best Practice](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
+
 ### 3.Production
 
 ```bash

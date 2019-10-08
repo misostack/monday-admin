@@ -243,6 +243,15 @@ Apache-2.0
    limitations under the License.
 
 
+@biesbjerg/ngx-translate-extract-marker
+MIT
+
+@ngx-translate/core
+MIT
+
+@ngx-translate/http-loader
+MIT
+
 core-js
 MIT
 Copyright (c) 2014-2019 Denis Pushkarev
