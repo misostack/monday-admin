@@ -93,6 +93,7 @@
               "buildOptimizer": true,
               "outputPath": "docs",
               "baseHref": "/monday-admin/",
+              "deployUrl": "/monday-admin/",
               "deleteOutputPath": false
             },
             "local": {
