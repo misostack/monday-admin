@@ -1,3 +1,44 @@
-<router-outlet></router-outlet>
-<button (click)="useLanguage('en')">en</button>
-<button (click)="useLanguage('vn')">vn</button>
+<section class="bd-index-fullscreen hero is-fullheight is-light">
+    <div class="hero-head">
+      <div class="container">
+        <div class="tabs is-centered">
+          <ul>
+            <li><a>This is always at the top</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container is-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- <div class="hero-body">
+      <div class="container">
+          <router-outlet></router-outlet>
+          <button (click)="useLanguage('en')">en</button>
+          <button (click)="useLanguage('vn')">vn</button>
+    
+        <header class="bd-index-header">
+          <h3 class="title is-3">
+            <a href="#">
+              <strong>Fullscreen</strong> vertical centering
+            </a>
+          </h3>
+          <h4 class="subtitle is-4">
+            Include any content you want, it's always centered
+          </h4>
+        </header>
+      </div>
+    </div> -->
+  
+    <div class="hero-foot">
+      <div class="container">
+        <div class="tabs is-centered">
+          <button (click)="useLanguage('en')">en</button>
+          <button (click)="useLanguage('vn')">vn</button>
+          <ul>
+            <li><a>And this at the bottom</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>

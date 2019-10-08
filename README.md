@@ -78,6 +78,32 @@ ng config schematics.@schematics/angular:component.styleext scss
 
 ### 1.Folder Structure
 
+```json
+{
+  "app":{
+    "pages": "static pages module",
+    "shared": { // "shared module"
+      // Included common modules:
+        // CommonModule,
+        // FormsModule,
+        // ReactiveFormsModule,
+        // HttpClientModule,
+        // RouterModule,
+        // TranslateModule      
+      // uikits: app ui tool kits
+      "uikits": {
+        "buttons": "app buttons",
+        ""
+      } 
+    },
+    "modules": {
+      "module-a": "feature a module",
+      // ...
+    }
+  }
+}
+```
+
 ### 2.Component Architecture
 
 ### 3.Application State Management
