@@ -32,6 +32,7 @@ https://misostack.github.io/monday-admin
 
 - [URL](https://misostack.github.io/monday-admin)
 - [Best Practice](https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/)
+- [Assets and Github Pages](https://medium.com/@lopesgon/translate-angular-4-with-ngx-translate-and-multiple-modules-7d9f0252f139)
 
 ### 3.Production
 
