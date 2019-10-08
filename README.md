@@ -26,6 +26,8 @@ yarn test-headless --configuration=local
 cp src/environments/environment.dev.dest.ts src/environments/environment.dev.ts
 # build
 yarn buildDev
+# URL
+https://misostack.github.io/monday-admin
 ```
 
 ### 3.Production
