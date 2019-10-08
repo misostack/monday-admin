@@ -1,5 +1,6 @@
 export const environment = {
   production: true,
-  name: 'monday-admin-prod',
-  hmr: false
+  name: 'prod',
+  hmr: false,
+  language: 'en'
 };

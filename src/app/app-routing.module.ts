@@ -10,12 +10,12 @@ const APP_ROUTES: Routes = [
   { path: '',
     redirectTo: '/404',
     pathMatch: 'full'
-  }, 
+  },
   // others
   { path: '**', component: PageNotFoundComponent}
-]
+];
 
-@NgModule({  
+@NgModule({
   imports: [
     RouterModule.forRoot(APP_ROUTES)
   ],

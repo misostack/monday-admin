@@ -20,7 +20,9 @@
     ],
     "plugins": [
       {"name": "@angular/language-service"}
-    ]
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

@@ -13,9 +13,9 @@ if (environment.production) {
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
 if (environment.hmr) {
-  //@ts-ignore
-  if (module[ 'hot' ]) {
-    //@ts-ignore
+  // @ts-ignore
+  if (module.hot) {
+    // @ts-ignore
     hmrBootstrap(module, bootstrap);
   } else {
     console.error('HMR is not enabled for webpack-dev-server!');

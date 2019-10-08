@@ -1,11 +1,7 @@
-<p>page-not-found works!</p>
-<h1 class="title">Title</h1>
+<h1 class="title">{{ 'pages.page_not_found.title' | translate }}</h1>
+<h3 class="subtitle" [translate]="locale['sub_title']"></h3>
+<p translate>pages.page_not_found.description</p>
 
-<h2 class="title">Angular with HMR - no need browser to refresh</h2>
-
-<p class="subtitle">
-  Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
-</p>
 
 <div class="field">
   <div class="control">
@@ -28,6 +24,6 @@
   <a class="button is-link">Link</a>
 </div>
 
-<pre *ngIf="ruby_code"><code class="language-ruby">
-{{ruby_code}}
+<pre *ngIf="rubyCode"><code class="language-ruby">
+{{rubyCode}}
 </code></pre>

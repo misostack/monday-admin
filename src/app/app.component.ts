@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 import { environment } from '../environments/environment';
-import { marker as _TRANSLATE } from '@biesbjerg/ngx-translate-extract-marker';
+import { TranslateService } from '@ngx-translate/core';
+import defaultLanguage from './../assets/i18n/en.json';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'monday-root',
@@ -9,15 +11,16 @@ import { marker as _TRANSLATE } from '@biesbjerg/ngx-translate-extract-marker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  title = environment.name;
+  constructor(
+    private translate: TranslateService,
+    private titleService: Title
+    ) {
+    translate.setTranslation('en', defaultLanguage);
+    translate.setDefaultLang(environment.language);
+    this.titleService.setTitle(translate.instant('app.title'));
+  }
 
-  ruby_code = `
-  #!/usr/bin/env ruby
-
-  def welcome
-    # $program_name is global variable
-    puts "#{$program_name} - Learn Enough Ruby To Be Dangerous!"
-  end  
-  `
+  useLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

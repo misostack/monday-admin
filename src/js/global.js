@@ -7,9 +7,9 @@ const MondayAdmin = {
   }
 };
 
-const _TRANSLATE = (str) => {
-  return str;
-}
+// const _TRANSLATE = (str) => {
+//   return str;
+// }
 
 document.addEventListener('DOMContentLoaded', function(event) {
   //the event occurred

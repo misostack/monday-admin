@@ -1,7 +1,8 @@
 export const environment = {
   production: false,
-  name: 'monday-admin-local',
-  hmr: true
+  name: 'local',
+  hmr: true,
+  language: 'en'
 };
 
 import 'zone.js/dist/zone-error';
