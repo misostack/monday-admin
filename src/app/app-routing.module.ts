@@ -19,7 +19,7 @@ const APP_ROUTES: Routes = [
   { 
     path: '', component: DashboardLayoutComponent,
     children: [
-      { path: '', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) }
+      { path: '', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) }
     ]
   },
   // others
