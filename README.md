@@ -97,13 +97,15 @@ ng config schematics.@schematics/angular:component.styleext scss
     },
     "layouts": { // layout modules
       "guess-layout": [],
-      "dashboard-layout": [],
-      "report-layout": [],
-      "page-layout": "" // the content layout
+      "dashboard-layout": []
     },
-    "modules": {
-      "module-a": "feature a module",
-      // ...
+    "dashboard": [ // all dashboard modules
+      "landing",
+      "profile",
+      "users"
+    ],
+    "auth": { // auth module
+
     }
   }
 }
