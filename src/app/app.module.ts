@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PagesModule } from './pages/pages.module';
 
 // import ngx-translate and the http loader
 import {HttpClient, HttpClientModule} from '@angular/common/http';
@@ -21,7 +20,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   ],
   imports: [
     BrowserModule,
-    PagesModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
