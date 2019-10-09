@@ -84,17 +84,22 @@ ng config schematics.@schematics/angular:component.styleext scss
     "pages": "static pages module",
     "shared": { // "shared module"
       // Included common modules:
-        // CommonModule,
-        // FormsModule,
-        // ReactiveFormsModule,
-        // HttpClientModule,
-        // RouterModule,
-        // TranslateModule      
-      // uikits: app ui tool kits
-      "uikits": {
-        "buttons": "app buttons",
-        ""
-      } 
+      // CommonModule,
+      // FormsModule,
+      // ReactiveFormsModule,
+      // HttpClientModule,
+      // RouterModule,
+      // TranslateModule
+      "uikits": [
+        "buttons", "form elements", "tables", "grid",
+        "search", "autocomplete", "calendar"
+      ]
+    },
+    "layouts": { // layout modules
+      "guess-layout": [],
+      "dashboard-layout": [],
+      "report-layout": [],
+      "page-layout": "" // the content layout
     },
     "modules": {
       "module-a": "feature a module",
