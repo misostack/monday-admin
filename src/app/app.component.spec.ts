@@ -1,12 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
-import {RouterTestingModule} from '@angular/router/testing'
+import {RouterTestingModule} from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 // import ngx-translate and the http loader
-import {HttpClient} from "@angular/common/http";
-import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
+import {HttpClient} from '@angular/common/http';
+import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
-import {HttpLoaderFactory} from "./app.module";
+import {HttpLoaderFactory} from './app.module';
 
 const TRANSLATIONS_EN = require('../assets/i18n/en.json');
 
@@ -28,14 +28,14 @@ describe('AppComponent', () => {
             useFactory: HttpLoaderFactory,
             deps: [HttpClient]
           }
-        })        
+        })
       ],
-      providers:[
+      providers: [
         TranslateService
       ]
     }).compileComponents();
     translate = TestBed.get(TranslateService);
-    http = TestBed.get(HttpTestingController);    
+    http = TestBed.get(HttpTestingController);
   }));
 
   it('should create the app', () => {

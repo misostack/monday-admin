@@ -9,28 +9,34 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 
 const APP_ROUTES: Routes = [
   // error page
-  { path: '403', component: PageBadRequestComponent},
-  { path: '404', component: PageNotFoundComponent},
-  { path: 'auth', component: GuessLayoutComponent, pathMatch: 'full',
+  { path: '403', component: PageBadRequestComponent, pathMatch: 'full'},
+  { path: '404', component: PageNotFoundComponent, pathMatch: 'full', data: {
+    title: 'pages.page_not_found.title'
+  }},
+  { path: 'auth', component: GuessLayoutComponent,
     children: [
       { path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) }
     ]
-  },  
-  { 
+  },
+  {
     path: '', component: DashboardLayoutComponent,
     children: [
       { path: '', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) }
     ]
   },
   // others
-  { path: '**', component: PageNotFoundComponent}  
+  { path: '**', component: PageNotFoundComponent, data: {
+    title: 'pages.page_not_found.title'
+  }}
 ];
 
 @NgModule({
   imports: [
     PagesModule,
     LayoutsModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   declarations: [],
   exports: [

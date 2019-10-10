@@ -1,4 +1,12 @@
 {
+	"app": {
+		"title": "Monday Admin"
+	},
+	"auth": {
+		"login": {
+			"title": "Đăng nhập"
+		}
+	},
 	"pages": {
 		"page_not_found": {
 			"description": "Trang web bạn đang tìm kiếm hiện không tồn tại. Có thể nó đã bị xóa hoặc đã đổi đường dẫn.Vui lòng truy cập trang chủ để biết thêm chi tiết",

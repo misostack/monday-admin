@@ -9,6 +9,7 @@
 cp src/environments/environment.local.dest.ts src/environments/environment.local.ts
 # start
 yarn start
+yarn build # local build
 ```
 
 #### Run Test
@@ -25,7 +26,7 @@ yarn test-headless --configuration=local
 # init
 cp src/environments/environment.dev.dest.ts src/environments/environment.dev.ts
 # build
-yarn buildDev
+yarn build:dev
 # URL
 https://misostack.github.io/monday-admin
 ```
@@ -40,7 +41,7 @@ https://misostack.github.io/monday-admin
 # init
 cp src/environments/environment.prod.dest.ts src/environments/environment.prod.ts
 # build
-yarn buildProd
+yarn build:prod
 ```
 
 ## II. Dev Tool

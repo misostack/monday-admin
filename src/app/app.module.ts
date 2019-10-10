@@ -6,12 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 
 // import ngx-translate and the http loader
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateModule, TranslateLoader,
+  MissingTranslationHandler, MissingTranslationHandlerParams
+} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+}
+
+export class MyMissingTranslationHandler implements MissingTranslationHandler {
+  handle(params: MissingTranslationHandlerParams) {
+    console.log(params);
+    return `{{MISSING.TRANSLATION}}${params.key}`;
+  }
 }
 
 @NgModule({
@@ -23,6 +32,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
+      missingTranslationHandler: {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
+      useDefaultLang: false,
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
@@ -30,7 +41,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
