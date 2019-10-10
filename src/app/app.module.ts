@@ -18,7 +18,6 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 export class MyMissingTranslationHandler implements MissingTranslationHandler {
   handle(params: MissingTranslationHandlerParams) {
-    console.log(params);
     return `{{MISSING.TRANSLATION}}${params.key}`;
   }
 }

@@ -94,6 +94,14 @@ ng config schematics.@schematics/angular:component.styleext scss
       "uikits": [
         "buttons", "form elements", "tables", "grid",
         "search", "autocomplete", "calendar"
+      ],
+      "i18n": [
+        // should be constant
+        // eg: 
+        "en.ts",
+        "vn.ts",
+        "en": []
+        "vn": []
       ]
     },
     "layouts": { // layout modules
@@ -105,14 +113,23 @@ ng config schematics.@schematics/angular:component.styleext scss
       "profile",
       "users"
     ],
-    "auth": { // auth module
-
-    }
+    "auth": [// auth module
+      // common components
+      "login", "forget-password", "reset-password"
+    ]
   }
 }
 ```
 
 ### 2.Component Architecture
+
+```json
+"component-a": [
+  "component-a.component.html",
+  "component-a.component.scss",
+  "component-a.component.ts"
+]
+```
 
 ### 3.Application State Management
 
@@ -134,8 +151,61 @@ ng config schematics.@schematics/angular:component.styleext scss
 
 ### 7.HTTP Requests
 
+#### Mocking
+
+The main idea is used http intercept with match url and method and local json files.
+
+- [Sample 001](https://dev.to/sanidz/angular-http-mock-interceptor-for-mocked-backend-1h5g)
+- [Sample 002](https://medium.com/better-programming/testing-http-requests-in-angular-with-httpclienttestingmodule-3880ceac74cf)
+
 ### 8.Error Tracking
 
 ### 9.Third Party Libs
+
+### 10.Translation
+
+#### i18n organization
+
+##### Global i18n
+
+- Will be defined in shared module under i18n folder of each language by constants and seperate by groups
+
+```json
+"en": {
+  "system":{
+    "time": "",
+    "validation": ""
+  },
+  "api":{
+    "auth": [
+      "login",
+      "register",
+      ...
+    ],
+    "users": [
+      "validation": [
+        "{fieldname}.required",
+        "{fieldname}.invalid",
+        // and other custom field validation
+      ]
+    ],
+    "errors": [
+      "404",
+      "403",
+      "500"
+    ]
+  }
+}
+```
+
+#### ICU syntax
+Compiler for ngx-translate that uses messageformat.js to compile translations using ICU syntax for handling pluralization, gender, and more.
+Eg: 
+```php
+'years'          => '{0, plural, =1{# year} other{# years}}',
+```
+
+- https://github.com/lephyrus/ngx-translate-messageformat-compiler
+- http://userguide.icu-project.org/formatparse/messages
 
 ### III.
