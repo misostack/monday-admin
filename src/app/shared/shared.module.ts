@@ -6,24 +6,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
+const modules = [
+  CommonModule,
+  FormsModule,
+  ReactiveFormsModule,
+  HttpClientModule,
+  RouterModule,
+  TranslateModule
+];
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule,
-    TranslateModule
+    ...modules
   ],
   exports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule,
-    TranslateModule
+    ...modules
   ]
 })
 export class SharedModule { }
