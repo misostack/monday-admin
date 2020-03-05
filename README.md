@@ -209,3 +209,76 @@ Eg:
 - http://userguide.icu-project.org/formatparse/messages
 
 ### III.
+
+### Others
+
+#### Firebase Structure Data
+
+```json
+{
+  // Chats contains only meta info about each conversation
+  // stored under the chats's unique ID  
+  "chats": {
+    "1": {
+      "title": "First Room",
+      "lastMessage": "jUX1EMWPgWZ92iRbdg4GgHjX53D2: Hello first Room",
+      "timestamp": 1459361875666
+    },
+    "2": {
+      "title": "Second Room",
+      "lastMessage": "jUX1EMWPgWZ92iRbdg4GgHjX53D2: Hello Second Room",
+      "timestamp": 1459361875666
+    },
+    "3": {
+      "title": "Third Room",
+      "lastMessage": "jUX1EMWPgWZ92iRbdg4GgHjX53D2: Hello Third Room",
+      "timestamp": 1459361875666
+    },
+  },
+  // Conversation members are easily accessible
+  // and stored by chat conversation ID  
+  "members": {
+    "1": {
+      "jUX1EMWPgWZ92iRbdg4GgHjX53D2": true,
+      "iAx5yz07ipQbQp64yRm6fEdIEXJ3": true,
+    },
+    "2": {
+      "jUX1EMWPgWZ92iRbdg4GgHjX53D2": true,
+      "iAx5yz07ipQbQp64yRm6fEdIEXJ3": true,
+    },
+    "3": {
+      "jUX1EMWPgWZ92iRbdg4GgHjX53D2": true,
+      "iAx5yz07ipQbQp64yRm6fEdIEXJ3": true,
+    },        
+  },
+  // Messages are separate from data we may want to iterate quickly
+  // but still easily paginated and queried, and organized by chat
+  // conversation ID
+  "messages": {
+    "one": {
+      "1": {
+        "uid": "jUX1EMWPgWZ92iRbdg4GgHjX53D2",
+        "message": "bla bla bllue blue",
+        "timestamp": 1459361875337
+      },
+      "2": {
+        "uid": "iAx5yz07ipQbQp64yRm6fEdIEXJ3",
+        "message": "bli blie blie",
+        "timestamp": 1459361975337
+      },
+      "3": {
+        "uid": "iAx5yz07ipQbQp64yRm6fEdIEXJ3",
+        "message": "bel bel ble",
+        "timestamp": 1459362075337
+      },
+      "4": {
+        "uid": "jUX1EMWPgWZ92iRbdg4GgHjX53D2",
+        "message": "Hello first Room",
+        "timestamp": 1459372075337
+      },                  
+    },
+    "two": {},
+    "three": {}
+  }  
+}
+```

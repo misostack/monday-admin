@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '@app/services/firebase.service';
 
 @Component({
   selector: 'monday-landing',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  messages: Array<any> = [];
+
+  constructor(
+    private firebaseService: FirebaseService
+  ) { }
 
   ngOnInit() {
+    
+  }
+
+  onReadMessages = () => {
+    this.firebaseService.readMessages(this.readMessages.bind(this), 1);
+  }
+
+  readMessages = (snapshot) => {
+    console.log(snapshot, snapshot.val())
+    this.messages = snapshot.val()
   }
 
 }

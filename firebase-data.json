@@ -1,0 +1,59 @@
+{
+  "chats": {
+    "1": {
+      "title": "First Room",
+      "lastMessage": "jUX1EMWPgWZ92iRbdg4GgHjX53D2: Hello first Room",
+      "timestamp": 1459361875666
+    },
+    "2": {
+      "title": "Second Room",
+      "lastMessage": "jUX1EMWPgWZ92iRbdg4GgHjX53D2: Hello Second Room",
+      "timestamp": 1459361875666
+    },
+    "3": {
+      "title": "Third Room",
+      "lastMessage": "jUX1EMWPgWZ92iRbdg4GgHjX53D2: Hello Third Room",
+      "timestamp": 1459361875666
+    }
+  },
+  "members": {
+    "1": {
+      "jUX1EMWPgWZ92iRbdg4GgHjX53D2": true,
+      "iAx5yz07ipQbQp64yRm6fEdIEXJ3": true
+    },
+    "2": {
+      "jUX1EMWPgWZ92iRbdg4GgHjX53D2": true,
+      "iAx5yz07ipQbQp64yRm6fEdIEXJ3": true
+    },
+    "3": {
+      "jUX1EMWPgWZ92iRbdg4GgHjX53D2": true,
+      "iAx5yz07ipQbQp64yRm6fEdIEXJ3": true
+    }    
+  },
+  "messages": {
+    "1": {
+      "1": {
+        "uid": "jUX1EMWPgWZ92iRbdg4GgHjX53D2",
+        "message": "bla bla bllue blue",
+        "timestamp": 1459361875337
+      },
+      "2": {
+        "uid": "iAx5yz07ipQbQp64yRm6fEdIEXJ3",
+        "message": "bli blie blie",
+        "timestamp": 1459361975337
+      },
+      "3": {
+        "uid": "iAx5yz07ipQbQp64yRm6fEdIEXJ3",
+        "message": "bel bel ble",
+        "timestamp": 1459362075337
+      },
+      "4": {
+        "uid": "jUX1EMWPgWZ92iRbdg4GgHjX53D2",
+        "message": "Hello first Room",
+        "timestamp": 1459372075337
+      }             
+    },
+    "2": {},
+    "3": {}
+  }  
+}

@@ -5,6 +5,8 @@ import { Title } from '@angular/platform-browser';
 import { environment } from '../environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 import defaultLanguage from './../assets/i18n/en.json';
+import { FirebaseService } from './services/firebase.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'monday-root',
@@ -12,11 +14,15 @@ import defaultLanguage from './../assets/i18n/en.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  authState: Observable<firebase.User>;
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private translate: TranslateService,
-    private titleService: Title
+    private titleService: Title,
+    private fireBaseService: FirebaseService,
     ) {
     translate.setTranslation('en', defaultLanguage);
     translate.setDefaultLang(environment.language);
@@ -25,6 +31,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.authState = this.fireBaseService.onAuthStateChanged()
+    this.authState.subscribe(user => {
+      console.log('user', user)
+    })
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
       map(() => this.activatedRoute),

@@ -10,6 +10,9 @@ import {TranslateModule, TranslateLoader,
   MissingTranslationHandler, MissingTranslationHandlerParams
 } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { FirebaseService } from './services/firebase.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -38,9 +41,12 @@ export class MyMissingTranslationHandler implements MissingTranslationHandler {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    CommonModule,
+    ReactiveFormsModule
   ],
   providers: [
+    FirebaseService
   ],
   bootstrap: [AppComponent]
 })

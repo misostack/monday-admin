@@ -3,12 +3,16 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
+import { FirebaseService } from '@services/firebase.service'
 
 import { hmrBootstrap } from './hmr';
 
 if (environment.production) {
   enableProdMode();
 }
+
+console.log('HOT RELOAD NOT ACCESS HERE');
+FirebaseService.initializeApp();
 
 const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
 
