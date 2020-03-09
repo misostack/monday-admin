@@ -2,14 +2,20 @@
   <div class="hero-head">
     <div class="container">
       <div class="tabs is-centered">
+        <p style="color:red;" *ngIf="errorMessage">{{ errorMessage }}</p>
         <ul>
           <li><a>This is always at the top</a></li>
+          <li><button (click)="signOut()">Sign Out</button></li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="container is-fluid">
+  <div class="container is-fluid">    
     <router-outlet></router-outlet>
+    <button (click)="fetchUsers()">Fetch Users</button>
+    <div *ngFor="let user of users$ | async">
+      {{user.uid}} - {{user.email}} 
+    </div>
   </div>
   <!-- <div class="hero-body">
     <div class="container">

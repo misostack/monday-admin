@@ -45,6 +45,15 @@ export class FirebaseService {
     .catch(err => errorCallback(err));
   }
 
+  signInWithCustomAuth = ({token}, errorCallback: IFirebaseErrorCallback) => {
+    const customToken = token ? token : environment.mock.token;
+    firebase
+    .auth()
+    .signInWithCustomToken(
+      customToken
+    ).catch(err => errorCallback(err));
+  }
+
   signOut = (errorCallback: IFirebaseErrorCallback) => {
     firebase.auth().signOut()
     .then(() => {})
